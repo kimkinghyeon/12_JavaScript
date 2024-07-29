@@ -5,5 +5,13 @@
 단축 평가(short-circuit eveluation)
 표현식을 평가하는 도중 평가 결과가 확정된 경우 나머지 평가 과정을 생략하는 것
 */
-console.log('apple' || 'banana');
-console.log(false || 'banana');
+
+// OR,AND 연산자 표현식의 결과가 때로는 블리언 값이 아닐 수 있다.
+// 논리 연산의 결과를 결정한 첫번째 피연산자를 반환한다.
+console.log('apple' || 'banana'); // apple
+console.log(false || 'banana');   // banana
+
+// null 또는 undefined 가 아닌지 확인하고 프로퍼티를 참조할 때
+var obj = null;
+
+var val = obj && obj.value;

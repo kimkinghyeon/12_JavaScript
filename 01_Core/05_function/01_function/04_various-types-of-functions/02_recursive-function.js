@@ -12,3 +12,9 @@ console.log(factorial(2));
 console.log(factorial(3));
 console.log(factorial(4));
 console.log(factorial(5));
+
+/*
+재귀 함수는 반복되는 처리를 반복문 없이 구현할 수 있는 장점
+무한 반복에 빠져서 스택 오버 플로우 에러를 발생 시킬 수 있으므로 주의
+반복문보다 재귀 함수 사용이 더 직과적 일 때만 사용하는것이 바람직
+*/

@@ -19,4 +19,4 @@ function outher(){
 }
 outher();
 
-inner();
+// inner(); ReferenceError: inner is not defined
