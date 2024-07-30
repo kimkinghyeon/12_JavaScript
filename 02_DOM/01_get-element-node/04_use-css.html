@@ -62,11 +62,9 @@
         const $foodlists = document.querySelectorAll('#list > .food');
         console.log($foodlists);
         [...$foodlists].forEach(food => food.style.color = 'gray');
+        // css 선택자를 만족시키는 요소가 없으면 빈 NodeLiist 객체 반환
         const $noElemList = document.querySelectorAll('.noElemet');
         console.log($noElemList);
-        
-        
-        
     </script>
 </body>
 
