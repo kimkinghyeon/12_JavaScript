@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .area{
+            background-color: aliceblue;
+            border: 1px solid black;
+            min-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>01. 마우스 이벤트</h1>
+    <h3>마우스 이벤트 종류</h3>
+    <ul>
+        <li>mousedown/mouseup</li>
+        <li>mouseover/mouseout</li>
+        <li>mousemove</li>
+        <li>click</li>
+        <li>contextmenu</li>
+    </ul>
+
+    <h3>마우스 이벤트 테스트</h3>
+    <button>클릭해보세요</button>
+    <div class="area"></div>
+    <script>
+        const $btn =document.querySelector('button');
+        const $area =document.querySelector('.area');
+        // 마우스가 포인터를 누르면
+        $btn.onmousedown = (e) => {
+            $area.insertAdjacentHTML('beforeend','mousedown button=' + e.button + "<br>");
+        };
+        // 마우스가 포인터를 꾹 누르면
+        $btn.onmouseup = (e) => {
+            $area.insertAdjacentHTML('beforeend','mouseup button=' + e.button + "<br>");
+        };
+        // 마우스가 포인터 영역에 들어오면
+        $btn.onmouseover = (e) => {
+            $area.insertAdjacentHTML('beforeend','mouseover button=' + e.button + "<br>");
+        };
+        // 마우스 포인터가 영역을 나가면 
+        $btn.onmouseout = (e) => {
+            $area.insertAdjacentHTML('beforeend','mouseout button=' + e.button + "<br>");
+        };
+        $btn.onclick = (e) => {
+            $area.insertAdjacentHTML('beforeend','mouseonclick button=' + e.button + "<br>");
+        };
+        $btn.ondblclick = (e) => {
+            $area.insertAdjacentHTML('beforeend','mouseondblclick button=' + e.button + "<br>");
+        };
+        // 우클릭 창이 떴을때 동작하는 이벤트
+        $btn.oncontextmenu = (e) => {
+            $area.insertAdjacentHTML('beforeend','mouseoncontextmenu button=' + e.button + "<br>");
+        };
+    </script>
+</body>
+</html>`
