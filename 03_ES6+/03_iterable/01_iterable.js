@@ -9,7 +9,7 @@ for(var i=0; i <= 5; i++){
 console.log([1,2,3,4,5][Symbol.iterator]());
 console.log('안녕하세여'[Symbol.iterator]());
 /*
-bject [Array Iterator] {}
+Object [Array Iterator] {}
 Object [String Iterator] {}
 이런식으,로 출력결과가 나오면 Iterable 한 자료형이다.
 Iterable 한 자료형에는 for ... of 라는 반복문 사용 가능
@@ -36,6 +36,7 @@ range[Symbol.iterator] = function (){
         }
     }
 }
+
 for (let num of range){
     console.log(num);
 }
