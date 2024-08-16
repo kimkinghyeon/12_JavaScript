@@ -1,0 +1,17 @@
+// 객체 구조 분해 할당
+let pants = {
+    productName : '배기팬츠',
+    color : '검정색',
+    price : 30000,
+}
+
+let { productName , color , price} = pants
+
+console.log(productName);
+console.log(color);
+console.log(price);
+
+// {객체 프로퍼티 : 목표 변수 } 형식을 작성가능
+// 변수의 서술 순서 무관하다.
+let { color: co, productName : pn, price : pr} = pants;
+console.log(co,pn,pr);
